@@ -7,11 +7,11 @@ import { UsersController } from './users/users.controller';
 import { UsersModule } from './users/users.module';
 import { User } from './users/user.entity';
 import { AuthModule } from './auth/auth.module';
-import  config  from './ormconfig'
+import * as ormConfig from './ormconfig';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot(config),
+    TypeOrmModule.forRoot(ormConfig),
     UsersModule,
     AuthModule,
   ],
