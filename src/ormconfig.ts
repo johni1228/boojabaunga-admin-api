@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv';
 const parse = require('pg-connection-string').parse;
 dotenv.config();
 const connectionOptions = parse(
-  process.env.DATABASE_URL?  process.env.DATABASE_URL : 'postgres://postgres:postgres@localhost:5432/boojabaunga'
+'postgres://postgres:postgres@localhost:5432/boojabaunga'
 );
 
 const config: ConnectionOptions = {
